@@ -1,0 +1,43 @@
+1.application form:
+
+public class appform{
+String name;
+int rollno;
+public void display (){
+System.out.println(name);
+System.out.println(rollno);
+}
+public static void main(String[] args) {
+appform codeio = new appform();
+codeio.name = "codeio";
+codeio.rollno = 71;
+codeio.display();
+}
+}
+
+2.creating objects:
+
+class applform {
+String name;
+int rollno;
+
+public void display () {
+    System.out.println(name);
+    System.out.println(rollno);
+}
+}
+
+public class Main {
+public static void main(String[] args) {
+applform codeio = new applform();
+codeio.name = "codeio";
+codeio.rollno = 71;
+codeio.display();
+
+    applform viewer = new applform();
+    viewer.name = "viewer";
+    viewer.rollno = 78106;
+    viewer.display();
+}
+}
+
