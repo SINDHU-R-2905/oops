@@ -41,3 +41,31 @@ codeio.display();
 }
 }
 
+
+3.class ApplForm {
+    String name;
+    int rollno;
+
+    public void display() {
+        System.out.println(name);
+        System.out.println(rollno);
+    }
+
+    public void setvalues(String str, int num) {
+        name = str;
+        rollno = num;
+    }
+}
+
+public class demo1 {   
+    public static void main(String[] args) {
+        ApplForm sindhu = new ApplForm();
+        sindhu.setvalues("sindhu", 71);
+        sindhu.display();
+
+        ApplForm viewer = new ApplForm();
+        viewer.setvalues("viewer", 78106);
+        viewer.display();
+    }
+}
+
