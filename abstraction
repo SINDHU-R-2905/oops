@@ -1,0 +1,35 @@
+1.public class AppliForm {
+    String name;
+    private int rollno;
+
+   
+    public void display() {
+        System.out.println(name);
+        System.out.println(rollno);
+    }
+
+    
+    public void setvalues(String str, int num) {
+        name = str;
+        rollno = num;
+    }
+
+    
+    public String getvalue() {
+        return name;
+    }
+
+   
+    public static void main(String[] args) {
+        AppliForm codeio = new AppliForm();
+        codeio.setvalues("codeio", 81);
+        codeio.display();
+        System.out.println(codeio.name);
+
+        AppliForm viewer = new AppliForm();
+        viewer.setvalues("viewer", 78106);
+        viewer.display();
+        String std2 = viewer.getvalue();
+        System.out.println(std2 + " = std2");
+    }
+}
