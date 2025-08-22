@@ -14,3 +14,24 @@ class ConstructorTest {
         System.out.println(obj.rollno); 
     }
 }
+
+
+2.parameterized constructor:
+
+class Sample {
+    int rollno;
+    int marks;
+    Sample(int num,int mark) {
+        System.out.println("this is parameterized constuctor");
+        rollno = num;
+        marks = mark;
+    
+    }
+}
+class ConstructorTest {
+    public static void main(String[] args) {
+        Sample obj = new Sample(33,58);
+        System.out.println(obj.rollno); 
+        System.out.println(obj.marks); 
+    }
+}
