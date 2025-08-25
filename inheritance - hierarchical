@@ -1,0 +1,24 @@
+1. class hierarchical {
+    public static void main(String[] args) {
+        mother  M = new mother();
+        System.out.println(M.gender);
+        M.print();
+        uncle U = new uncle();
+        System.out.println(U.gender);
+        U.print();
+    }
+    
+}
+class grandfather{
+    char gender = 'M';
+    void print(){
+        System.out.println("parent class");
+    }
+}
+class mother extends grandfather{
+    char gender = 'F';
+
+}
+class uncle extends grandfather{
+    char gender = 'M';
+}
