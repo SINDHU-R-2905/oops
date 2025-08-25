@@ -1,1 +1,33 @@
-1.
+1.class inheritance {
+    public static void main (String args []) {
+        daughter M = new daughter();
+        System.out.println(M.gender);
+        M.print();
+        
+        granddaughter G = new granddaughter();
+        System.out.println(G.gender);
+        G.print();
+    }
+}
+
+class father {
+    char gender = 'M';
+    void print() {
+        System.out.println("parent class");
+    }
+}
+
+class daughter extends father {
+    char gender = 'F';
+}
+
+class son extends father {
+    
+}
+
+class granddaughter extends daughter {
+    void print() {
+        System.out.println("granddaughter");
+    }
+}
+
