@@ -1,0 +1,94 @@
+What is Polymorphism?
+
+Polymorphism means "many forms".
+In OOP, it allows one action to be performed in different ways.
+
+👉 In Java, polymorphism is mainly of two types:
+
+Compile-time polymorphism (Method Overloading)
+
+Runtime polymorphism (Method Overriding)
+
+🔹 1. Compile-time Polymorphism (Method Overloading)
+
+Achieved by defining multiple methods with the same name but different parameters.
+
+Decided at compile time.
+
+Example:
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class OverloadingExample {
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+        System.out.println(c.add(5, 10));       // calls int version
+        System.out.println(c.add(3.5, 2.5));   // calls double version
+    }
+}
+
+
+✅ Output:
+
+15
+6.0
+
+🔹 2. Runtime Polymorphism (Method Overriding)
+
+Achieved when a subclass provides its own version of a method from the parent class.
+
+Resolved at runtime using dynamic method dispatch.
+
+Example:
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class OverridingExample {
+    public static void main(String[] args) {
+        Animal a;
+
+        a = new Dog();  
+        a.sound();  // Dog's version
+
+        a = new Cat();  
+        a.sound();  // Cat's version
+    }
+}
+
+
+✅ Output:
+
+Dog barks
+Cat meows
+
+🔹 Why Use Polymorphism?
+
+Increases flexibility and reusability of code.
+
+Supports the “one interface, many implementations” principle.
+
+Enables dynamic method calls (late binding).
