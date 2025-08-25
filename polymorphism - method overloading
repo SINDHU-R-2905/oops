@@ -1,24 +1,21 @@
-1.class animal {
-    int nolegs = 4;
-    public static void eat() {
-        System.out.println("I am eating");
-    
-    }
-    public static void walk(){
-        System.out.println("I am walking");
-    }
-    
-}
-class dog extends animal{
-    Boolean canbark = true;
-}
-class call{
+1.class Polymorphism {
     public static void main(String[] args) {
-        dog obj = new dog();
-        
-        System.out.println(obj.nolegs);
-        System.out.println(obj.canbark);
-        obj.eat();
-        obj.walk();
+        Method obj1 = new Method();
+        obj1.min(5, 6);
+        obj1.min(5, 6, 7);
+    }
+}
+
+class Method {
+    void min(int a, int b) {
+        if (a < b) {
+            System.out.println(a);
+        } else {
+            System.out.println(b);
+        }
+    }
+
+    void min(int a, int b, int c) {
+        System.out.println(a);
     }
 }
