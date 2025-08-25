@@ -1,0 +1,52 @@
+Inheritance in Java is a mechanism where one class (child / subclass / derived class) acquires the properties and methods of another class (parent / superclass / base class).
+
+Helps in reusability (no need to rewrite the same code).
+
+Supports method overriding (polymorphism).
+
+Improves code organization.
+
+
+Syntax of Inheritance
+
+We use the extends keyword:
+
+class Parent {
+    // properties and methods
+}
+
+class Child extends Parent {
+    // extra properties and methods
+}
+
+
+Types of Inheritance in Java
+
+Java does not support multiple inheritance with classes (to avoid ambiguity), but it supports it through interfaces.
+
+Single Inheritance → One class inherits another.
+
+A → B
+
+
+Multilevel Inheritance → A class inherits from a class, which itself inherits from another.
+
+A → B → C
+
+
+Hierarchical Inheritance → Multiple classes inherit from the same parent.
+
+     A
+    / \
+   B   C
+
+
+Multiple Inheritance (via Interfaces only) → A class can implement multiple interfaces.
+
+interface A { void show(); }
+interface B { void display(); }
+
+class C implements A, B {
+    public void show() { System.out.println("From A"); }
+    public void display() { System.out.println("From B"); }
+}
